@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>listar-aluno</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+   <ion-grid>
+    <ion-row>
+        <ion-col>Nome</ion-col>
+        <ion-col>Telefone</ion-col>
+        <ion-col>Perildo</ion-col>
+        <ion-col>opções</ion-col>
+      </ion-row> 
+
+      
+  <ion-item *ngFor="let aluno of alunos | async">
+    <ion-col>{{ aluno.nome }}</ion-col>
+    <ion-col>{{ aluno.telefone }}</ion-col>
+    <ion-col>{{ aluno.perildo }}</ion-col>
+    <ion-button expand="full" shape="round" color="danger" (click)="excluir(aluno.key, aluno)">Excluir</ion-button>
+  </ion-item>
+</ion-grid>
+
+</ion-content>

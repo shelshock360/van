@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-label>Digite seu email</ion-label>
+  <input type="text" name="nome" [(ngModel)]="usuario.email"/><br/>
+  <ion-label>Digite sua senha</ion-label>
+<input type="password" name="senha" [(ngModel)]="usuario.senha"/>
+<ion-button (click)="logar()">Acessar</ion-button>
+</ion-content>

@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>salvar-aluno</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ <ion-item>
+<ion-label>nome</ion-label>
+ <input type="text" name="nome" [(ngModel)]="aluno.nome"/>
+ </ion-item>
+ <ion-item>
+ <ion-label>telefone</ion-label>
+ <input type="text" name="telefone" [(ngModel)]="aluno.telefone"/>
+ </ion-item>
+
+ <ion-item>
+  <ion-label>perildo</ion-label>
+  <input type="text" name="perildo" [(ngModel)]="aluno.perildo"/>
+  </ion-item>
+ <ion-item>
+    <ion-label>Escola</ion-label>
+  <ion-select [(ngModel)]="aluno.escola">
+    <ion-select-option *ngFor='let escola of listaEscola | async' [value]="escola" >
+    {{escola.nome}}
+    </ion-select-option>
+    </ion-select>
+ </ion-item>
+ <ion-button (click)="salvar()">salvar</ion-button>
+</ion-content>

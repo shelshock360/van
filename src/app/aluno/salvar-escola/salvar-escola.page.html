@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>salvar-escola</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ <ion-item>
+<ion-label>nome</ion-label>
+ <input type="text" name="nome" [(ngModel)]="escola.nome"/>
+ </ion-item>
+ <ion-item>
+ <ion-label>cidade</ion-label>
+ <input type="text" name="cidade" [(ngModel)]="escola.cidade"/>
+ </ion-item>
+
+ <ion-button (click)="salvar()">salvar</ion-button>
+</ion-content>

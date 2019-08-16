@@ -1,0 +1,13 @@
+.hydrated {
+    visibility: inherit;
+    color: blue;
+}
+
+.toolbar-container {
+    padding-left: unset;
+    padding-right: unset;
+    padding-inline-start: var(--padding-start);
+    padding-inline-end: var(--padding-end);
+    background-color: red;
+    color: white;
+}
